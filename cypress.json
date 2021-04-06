@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://www.saucedemo.com/",
+    "testFiles": "**/*.{feature,features}",
+    "env": {
+        "fixturesBaseDir": "test_data_files/"
+    }
+}
