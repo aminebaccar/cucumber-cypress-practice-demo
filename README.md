@@ -8,7 +8,7 @@ Step definitions are divided into three files based on their gherkin keyword ```
 In this project, test data isn't hardcoded into the feature files, instead it's provided inside ```.json``` files inside the fixtures directory ```./fixtures``` to facilitate data reuse and implement data-driven testing. 
 
 ## Locators
-Web element locators are provided in xpath, I used the [cypress-xpath](https://www.npmjs.com/package/cypress-xpath) package to locate web elements.
+Web element locators are provided in xpath and grouped in the ```locators.js``` in the ```./fixtures``` directory, I used the [cypress-xpath](https://www.npmjs.com/package/cypress-xpath) package to locate web elements.
 ## Installation
 Use the package manager [npm](https://www.npmjs.com/get-npm) to install dependencies from ```package.json```.
 
