@@ -1,7 +1,13 @@
 name: Smoke tests
 on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
   schedule:
-  - cron:  '23 2 * * *'
+  - cron:  '0 7 * * *'
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -9,10 +15,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          install: npm install
-          test_chrome: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
-          test_edge: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser edge
-          test_firefox: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser firefox
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run smoke tests on chrome
+        run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
+
+      - name: Run smoke tests on edge
+        run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser edge
+        
+      - name: Run smoke tests on firefox
+        run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser firefox
