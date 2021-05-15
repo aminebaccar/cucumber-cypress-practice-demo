@@ -18,7 +18,6 @@ jobs:
       - name: Run smoke tests on chrome
         uses: cypress-io/github-action@v2
         with:
-          build: npm run build
           start: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
           
       - name: Run smoke tests on edge
