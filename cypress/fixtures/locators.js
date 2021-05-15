@@ -10,7 +10,8 @@ module.exports = {
         MY_CART: "//*[@id='shopping_cart_container']/a"
     },
     ITEMPAGE: {
-        ADD_TO_CART_BUTTON: "//button[contains(@name, 'add-to-cart')]"
+        ADD_TO_CART_BUTTON: "//button[contains(@name, 'add-to-cart')]",
+        BACK_TO_PRODUCTS_BUTTON: "//button[@id='back-to-products']"
     },
     CARTPAGE: {
         CHECKOUT: "//*[@id='checkout']"

@@ -51,3 +51,7 @@ When("click on continue", () => {
 When("click on finish", () => {
   cy.xpath(elements.CHECKOUTOVERVIEWPAGE.FINISH).click();
 });
+
+When("go back to products list", () => {
+  cy.xpath(elements.ITEMPAGE.BACK_TO_PRODUCTS_BUTTON).click();
+});

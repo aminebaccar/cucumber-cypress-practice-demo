@@ -2,5 +2,9 @@
     {
         "id": "sauce.labs.bolt.tshirt",
         "name": "Sauce Labs Bolt T-Shirt"
+    },
+    {
+        "id": "sauce.labs.onesie",
+        "name": "Sauce Labs Onesie"
     }
 ]

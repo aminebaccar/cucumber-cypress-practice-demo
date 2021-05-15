@@ -1,6 +1,7 @@
 {
     "baseUrl": "https://www.saucedemo.com/",
-    "testFiles": "**/*.{feature,features}",
+    "testFiles": ["**/*.{feature,features}"],
+    "chromeWebSecurity": false,
     "env": {
         "fixturesBaseDir": "test_data_files/"
     }
