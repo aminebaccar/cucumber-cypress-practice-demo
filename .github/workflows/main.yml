@@ -10,11 +10,12 @@ on:
   - cron:  '0 7 * * *'
 jobs:
   cypress-run:
-    runs-on: windows-latest
+    container: cypress/included:7.3.0
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      
+              
       - name: Run smoke tests on chrome
         run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
 
