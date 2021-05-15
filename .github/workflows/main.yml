@@ -11,16 +11,23 @@ on:
 jobs:
   cypress-run:
     container: cypress/included:7.3.0
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
               
       - name: Run smoke tests on chrome
-        run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
-
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
+          
       - name: Run smoke tests on edge
-        run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser edge
-        
+        uses: cypress-io/github-action@v2
+        with:
+          start: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser edge
+          
       - name: Run smoke tests on firefox
-        run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser firefox
+        uses: cypress-io/github-action@v2
+        with:
+          start: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser firefox
