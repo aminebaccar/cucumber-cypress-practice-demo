@@ -1,7 +1,7 @@
-name: End-to-end tests
+name: Smoke tests
 on:
   schedule:
-  - cron:  '10 23 * * *'
+  - cron:  '10 2 * * *'
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -13,4 +13,6 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           install: npm install
-          test: npm run cy:open
+          test_chrome: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
+          test_edge: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser edge
+          test_firefox: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser firefox
