@@ -1,7 +1,7 @@
 name: Smoke tests
 on:
   schedule:
-  - cron:  '10 2 * * *'
+  - cron:  '23 2 * * *'
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
