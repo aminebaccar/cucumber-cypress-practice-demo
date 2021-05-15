@@ -16,16 +16,10 @@ jobs:
         uses: actions/checkout@v1
               
       - name: Run smoke tests on chrome
-        uses: cypress-io/github-action@v2
-        with:
-          start: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
+        run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
           
       - name: Run smoke tests on edge
-        uses: cypress-io/github-action@v2
-        with:
-          start: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser edge
+        run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser edge
           
       - name: Run smoke tests on firefox
-        uses: cypress-io/github-action@v2
-        with:
-          start: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser firefox
+        run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser firefox
