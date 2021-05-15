@@ -15,6 +15,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
               
+      - name: Install dependencies
+        run: npm install
+        
       - name: Run smoke tests on chrome
         run: ./node_modules/.bin/cypress-tags run -e TAGS='@SmokeTest' --browser chrome
           
