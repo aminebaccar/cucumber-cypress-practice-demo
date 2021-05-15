@@ -10,7 +10,6 @@ on:
   - cron:  '0 7 * * *'
 jobs:
   cypress-run:
-    container: cypress/included:7.3.0
     runs-on: windows-latest
     steps:
       - name: Checkout
