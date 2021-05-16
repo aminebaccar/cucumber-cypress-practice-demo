@@ -1,4 +1,4 @@
-# Cucumber + Cypress Sample Project
+# Cucumber Cypress Integration Sample Project
 [![Full Regression](https://github.com/aminebaccar/cucumber-cypress-practice-demo/actions/workflows/full_regression.yml/badge.svg?branch=main)](https://github.com/aminebaccar/cucumber-cypress-practice-demo/actions/workflows/full_regression.yml)
 [![Smoke tests](https://github.com/aminebaccar/cucumber-cypress-practice-demo/actions/workflows/smoke.yml/badge.svg)](https://github.com/aminebaccar/cucumber-cypress-practice-demo/actions/workflows/smoke.yml)
 
