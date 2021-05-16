@@ -1,13 +1,9 @@
 name: Smoke tests
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   schedule:
   - cron:  '0 7 * * *'
+  workflow_dispatch:
+
 jobs:
   cypress-run:
     runs-on: windows-latest
