@@ -1,5 +1,6 @@
 # Cucumber + Cypress Sample Project
 [![Full Regression](https://github.com/aminebaccar/cucumber-cypress-practice-demo/actions/workflows/full_regression.yml/badge.svg?branch=main)](https://github.com/aminebaccar/cucumber-cypress-practice-demo/actions/workflows/full_regression.yml)
+[![Smoke tests](https://github.com/aminebaccar/cucumber-cypress-practice-demo/actions/workflows/smoke.yml/badge.svg)](https://github.com/aminebaccar/cucumber-cypress-practice-demo/actions/workflows/smoke.yml)
 
 This is a demo project of integrating Cypress and Cucumber to create a testing framework on which you can write e2e tests with ease, a sample BDD scenario is written and its steps implemented, the test is to be ran on the [SwagLabs](http://saucedemo.com/) demo app.
 
